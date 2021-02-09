@@ -1,1 +1,1 @@
-sass scss/style.scss css/style.css --style=compressed --no-source-map
+sass scss/main.scss css/style.css --style=compressed --no-source-map
