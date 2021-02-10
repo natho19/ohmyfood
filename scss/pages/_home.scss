@@ -1,0 +1,33 @@
+.location {
+    background-color: $gray-medium;
+    @extend %container-sm;
+    @include flex(row, center, center, wrap);
+
+    &__icon {
+        margin-right: 10px;
+    }
+
+    &__address {
+        font-style: normal;
+    }
+}
+
+.restaurants {
+    background-color: $gray-light;
+    text-align: center;
+
+    &__description {
+        font-size: rem(18);
+        font-weight: 300;
+        margin-bottom: rem(30);
+    }
+}
+
+.steps {
+    padding: 0 rem(15);
+    margin: rem(30) 0;
+}
+
+.menus {
+    background-color: $gray-light;
+}

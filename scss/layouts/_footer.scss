@@ -1,0 +1,20 @@
+.footer {
+    background: $black;
+    color: $white;
+    @extend %container-sm;
+
+    &__title {
+        font-family: 'Shrikhand', cursive;
+        font-weight: normal;
+        font-size: rem(18);
+    }
+
+    li {
+        margin-bottom: rem(10);
+    }
+
+    li i {
+        margin-right: rem(10);
+        font-size: rem(14);
+    }
+}

@@ -1,0 +1,8 @@
+.btn {
+    display: inline-block;
+    background: linear-gradient(180deg, $color-secondary, $color-primary);
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    color: $white;
+    @include button-shadow;
+}

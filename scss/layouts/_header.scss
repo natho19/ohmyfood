@@ -1,0 +1,15 @@
+.header {
+    position: relative;
+    z-index: 1;
+    @extend %container-sm;
+    @include header-shadow;
+
+    &__logo {
+        text-align: center;
+        line-height: 0;
+
+        a {
+            display: inline-block;
+        }
+    }
+}
