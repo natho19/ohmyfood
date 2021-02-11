@@ -5,9 +5,12 @@
 @import "./utils/extensions";
 @import "./base/reset";
 @import "./base/base";
+@import "./components/titles";
 @import "./components/buttons";
 @import "./components/step";
-@import "./components/menu";
+@import "./components/carte";
+@import "./components/plate";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/home";
+@import "./pages/menu";

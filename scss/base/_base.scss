@@ -9,7 +9,7 @@ body {
 }
 
 section {
-    padding: 40px 20px;
+    @extend %container;
 }
 
 h1 {

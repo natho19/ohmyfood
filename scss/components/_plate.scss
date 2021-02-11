@@ -1,0 +1,24 @@
+.plate {
+    padding: rem(12);
+    background: $white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    @include general-shadow;
+    @include flex(row, flex-end, space-between, nowrap);
+
+    &_info {
+        &__title {
+            font-size: rem(18);
+            font-weight: 900;
+            margin-bottom: rem(5);   
+        }
+
+        &__composition {
+            font-weight: 300;
+        }
+    }
+
+    &_price {
+        margin-right: 1rem;
+    }
+}

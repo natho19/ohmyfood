@@ -6,3 +6,12 @@
     color: $white;
     @include button-shadow;
 }
+
+.btn--py {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.btn-like {
+    font-size: rem(25);
+}

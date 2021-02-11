@@ -3,13 +3,18 @@
     z-index: 1;
     @extend %container-sm;
     @include header-shadow;
+    @include flex(row, center, center, nowrap);
 
     &__logo {
-        text-align: center;
+        margin: 0 auto;
         line-height: 0;
 
         a {
             display: inline-block;
         }
+    }
+
+    &__navbar i {
+        font-size: rem(18);
     }
 }

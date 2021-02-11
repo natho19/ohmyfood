@@ -1,4 +1,4 @@
-.menu {
+.carte {
     position: relative;
     border-radius: 1rem;
     margin-bottom: rem(20);
@@ -17,19 +17,15 @@
         padding: 1rem;
         @include flex(row, center, space-between, nowrap);
 
-        .menu-description__title {
+        .carte-description__title {
             font-size: rem(18);
             font-weight: 900;
             margin-bottom: rem(5);
         }
 
-        .menu-description__city {
+        .carte-description__city {
             font-weight: 300;
             text-transform: capitalize;
-        }
-
-        .btn-like {
-            font-size: rem(25);
         }
     }
 
