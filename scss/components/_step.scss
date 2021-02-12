@@ -6,6 +6,7 @@
     position: relative;
     @include flex(row, center, flex-start, nowrap);
     @include general-shadow;
+    @include transition-ease;
 
     &__icon {
         margin: 0 rem(20) 0 rem(26);
@@ -31,7 +32,9 @@
     }
 
     &:hover {
+        cursor: pointer;
         background-color: $color-primary-light;
+        @include hover-shadow;
 
         i {
             color: $color-primary;

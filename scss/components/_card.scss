@@ -1,4 +1,4 @@
-.carte {
+.card {
     position: relative;
     border-radius: 1rem;
     margin-bottom: rem(20);
@@ -17,13 +17,13 @@
         padding: 1rem;
         @include flex(row, center, space-between, nowrap);
 
-        .carte-description__title {
+        .card-description__title {
             font-size: rem(18);
             font-weight: 900;
             margin-bottom: rem(5);
         }
 
-        .carte-description__city {
+        .card-description__city {
             font-weight: 300;
             text-transform: capitalize;
         }
@@ -38,6 +38,10 @@
         top: 15px;
         right: 15px;
         @include general-shadow;
+    }
+
+    &:hover {
+        @include hover-shadow;
     }
 
 }

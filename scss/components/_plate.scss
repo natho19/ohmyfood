@@ -5,7 +5,7 @@
     margin-bottom: 1rem;
     @include general-shadow;
     @include flex(row, flex-end, space-between, nowrap);
-
+    
     &_info {
         &__title {
             font-size: rem(18);
@@ -20,5 +20,9 @@
 
     &_price {
         margin-right: 1rem;
+    }
+
+    &:hover {
+        @include hover-shadow;
     }
 }

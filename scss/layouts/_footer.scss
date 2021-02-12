@@ -13,8 +13,14 @@
         margin-bottom: rem(10);
     }
 
+    li a {
+        &:hover {
+            color: darken($white, 20%);
+        }
+    }
+
     li i {
-        margin-right: rem(10);
+        margin-right: rem(5);
         font-size: rem(14);
     }
 }
