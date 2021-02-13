@@ -3,12 +3,14 @@
     background: $white;
     border-radius: 1rem;
     margin-bottom: 1rem;
+    animation: plateAppear .7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-fill-mode: both;
+    transform: scale(0);
     @include general-shadow;
     @include flex(row, flex-end, space-between, nowrap);
     
     &_info {
         &__title {
-            font-size: rem(18);
             font-weight: 900;
             margin-bottom: rem(5);   
         }
@@ -24,5 +26,11 @@
 
     &:hover {
         @include hover-shadow;
+    }
+}
+
+@for $i from 1 to 10 {
+    .delay--#{$i} {
+      animation-delay:  #{$i/10}s;
     }
 }
