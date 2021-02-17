@@ -3,7 +3,7 @@
     background: $white;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    animation: plateAppear .7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: plateappear .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     animation-fill-mode: both;
     transform: scale(0);
     @include general-shadow;

@@ -6,7 +6,7 @@
   padding: 2.5rem 1.25rem;
 }
 
-@keyframes plateAppear {
+@keyframes plateappear {
   0% {
     transform: scale(0);
   }
@@ -271,7 +271,7 @@ button {
   background: #FFF;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  animation: plateAppear 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: plateappear 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation-fill-mode: both;
   transform: scale(0);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -350,21 +350,11 @@ button {
 }
 .header__navbar a {
   display: inline-block;
-  background: none;
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  border-radius: 50%;
-  text-align: center;
+  font-size: 1.125rem;
+  transform: scale(1);
 }
 .header__navbar a:hover {
-  background: #EAEAEA;
-}
-.header__navbar a:active {
-  background: #7E7E7E;
-}
-.header__navbar i {
-  font-size: 1.125rem;
+  transform: scale(1.2);
 }
 
 .footer {

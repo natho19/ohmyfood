@@ -16,23 +16,13 @@
 
     &__navbar a {
         display: inline-block;
-        background: none;
-        width: rem(40);
-        height: rem(40);
-        line-height: rem(40);
-        border-radius: 50%;
-        text-align: center;
+        font-size: rem(18);
+        transform: scale(1);
 
         &:hover {
-            background: $gray-medium;
+            transform: scale(1.2);
         }
 
-        &:active {
-            background: $gray;
-        }
     }
 
-    &__navbar i {
-        font-size: rem(18);
-    }
 }
