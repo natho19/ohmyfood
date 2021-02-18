@@ -14,6 +14,36 @@
     transform: scale(1);
   }
 }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(360deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes contentappear {
+  0% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 10000;
+  }
+}
+@keyframes confirmationrotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -274,12 +304,18 @@ button {
   animation: plateappear 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation-fill-mode: both;
   transform: scale(0);
+  overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: inherit;
   justify-content: space-between;
   flex-wrap: nowrap;
+}
+.plate_info {
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
 }
 .plate_info__title {
   font-weight: 900;
@@ -287,12 +323,39 @@ button {
 }
 .plate_info__composition {
   font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .plate_price {
-  margin-right: 1rem;
+  margin-top: auto;
+  margin-left: 1rem;
+}
+.plate_confirmation {
+  background-color: #99E2D0;
+  color: #FFF;
+  font-size: 1.25rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -0.75rem -4.5rem -0.75rem 1rem;
+  transition: margin-right 1s ease;
+}
+.plate_confirmation i {
+  transform: rotate(0);
+  transition: transform 1s ease;
 }
 .plate:hover {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+.plate:hover .plate_confirmation {
+  margin-right: -0.75rem;
+}
+.plate:hover .plate_confirmation i {
+  transform: rotate(360deg);
 }
 
 .delay--1 {
@@ -407,8 +470,65 @@ button {
   margin: 1.875rem 0;
 }
 
-.menus {
+.cards {
   background-color: #F6F6F6;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__circles {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 80px;
+  border: 4px solid transparent;
+  border-top-color: #9356DC;
+  animation: spin 2s linear 1.1s;
+  animation-fill-mode: both;
+}
+.loader__circles::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  bottom: 8px;
+  right: 8px;
+  border-radius: 50px;
+  border: 4px solid transparent;
+  border-top-color: #FF79DA;
+  opacity: 0.8;
+  animation: spin 2.5s linear 600ms;
+}
+.loader__circles:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50px;
+  border: 4px solid transparent;
+  border-top-color: #99E2D0;
+  opacity: 0.5;
+  animation: spin 3s linear 100ms;
+}
+
+.content {
+  position: relative;
+  animation: contentappear 3.5s ease-in-out;
+  animation-fill-mode: both;
 }
 
 .menu {

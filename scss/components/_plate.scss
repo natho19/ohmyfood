@@ -6,10 +6,15 @@
     animation: plateappear .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     animation-fill-mode: both;
     transform: scale(0);
+    overflow: hidden;
     @include general-shadow;
-    @include flex(row, flex-end, space-between, nowrap);
+    @include flex(row, inherit, space-between, nowrap);
     
     &_info {
+        white-space: nowrap;
+        overflow: hidden;
+        flex: 1;
+
         &__title {
             font-weight: 900;
             margin-bottom: rem(5);   
@@ -17,15 +22,46 @@
 
         &__composition {
             font-weight: 300;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
     }
 
     &_price {
-        margin-right: 1rem;
+        margin-top: auto;
+        margin-left: 1rem;
+    }
+
+    &_confirmation {
+        background-color: #99E2D0;
+        color: $white;
+        font-size: rem(20);
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        width: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -0.75rem -4.5rem -0.75rem 1rem;
+        transition: margin-right 1s ease;
+
+        i {
+            transform: rotate(0);
+            transition: transform 1s ease;
+        }   
     }
 
     &:hover {
         @include hover-shadow;
+
+        .plate_confirmation {
+            margin-right: -0.75rem;
+
+            i {
+                transform: rotate(360deg);
+            }
+        }
     }
 }
 
