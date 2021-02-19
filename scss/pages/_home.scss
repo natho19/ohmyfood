@@ -1,7 +1,6 @@
 #content {
     position: relative;
-    animation: contentappear 3.5s ease-in-out;
-    animation-fill-mode: both;
+    animation: contentappear 3.5s ease-in-out both;
 }
 
 .location {
