@@ -44,4 +44,11 @@
         @include hover-shadow;
     }
 
+    @media #{$medium-up} {
+        flex-basis: 48%;
+    }
+
+    @media #{$xlarge-up} {
+        flex-basis: 30%;
+    }
 }

@@ -33,13 +33,19 @@
     }
 
     &:hover {
-        cursor: pointer;
         background-color: $color-primary-light;
-        @include hover-shadow;
 
         i {
             color: $color-primary;
         }
+    }
+
+    @media #{$medium-up} {
+        flex-basis: 47%;
+    }
+
+    @media #{$large-up} {
+        flex-basis: 30%;
     }
 
 }

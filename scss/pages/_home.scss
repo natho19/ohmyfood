@@ -33,10 +33,22 @@
     }
 }
 
-.operation__steps {
+.steps {
     margin: rem(30) 0;
+
+    @media #{$medium-up} {
+        &__list {
+            @include flex(row, center, space-between, wrap)
+        }
+    }
 }
 
 .cards {
     background-color: $gray-light;
+
+    @media #{$medium-up} {
+        &__list {   
+            @include flex(row, center, space-between, wrap)
+        }
+    }
 }

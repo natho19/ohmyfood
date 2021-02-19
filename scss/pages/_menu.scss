@@ -33,6 +33,12 @@
 
     &__plates {
         margin-bottom: 3rem;
+
+        @media #{$medium-up} {
+            .plates__list {
+                @include flex(row, stretch, space-between, wrap)
+            }
+        }
     }
 
     &__order {
