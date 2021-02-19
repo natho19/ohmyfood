@@ -1,4 +1,8 @@
-.location, .footer, .header {
+.location, .header {
+  padding: 1rem;
+}
+
+.footer {
   padding: 1.25rem;
 }
 
@@ -99,7 +103,7 @@ body {
   color: #000;
 }
 
-h1 {
+h2 {
   font-size: 1.5625rem;
   font-weight: 900;
   margin-bottom: 1.25rem;
@@ -123,9 +127,61 @@ button {
   outline: none;
 }
 
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__circles {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 80px;
+  border: 4px solid transparent;
+  border-top-color: #9356DC;
+  animation: spin 2s linear 1.1s;
+  animation-fill-mode: both;
+}
+.loader__circles::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  bottom: 8px;
+  right: 8px;
+  border-radius: 50px;
+  border: 4px solid transparent;
+  border-top-color: #FF79DA;
+  opacity: 0.8;
+  animation: spin 2.5s linear 600ms;
+}
+.loader__circles:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50px;
+  border: 4px solid transparent;
+  border-top-color: #99E2D0;
+  opacity: 0.5;
+  animation: spin 3s linear 100ms;
+}
+
 .underline-title {
   text-transform: uppercase;
   margin-bottom: 1.25rem;
+  font-weight: 300;
 }
 .underline-title:after {
   background: #99E2D0;
@@ -166,48 +222,55 @@ button {
 .btn:hover:after {
   opacity: 1;
 }
-
 .btn--py {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.btn--mr {
+  margin-right: 1.25rem;
 }
 
 .btn-like {
-  font-size: 1.875rem;
   position: relative;
+  font-size: 1.875rem;
 }
 .btn-like .far {
   opacity: 1;
-  transition: opacity 0.3s ease-in;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s ease-in;
 }
 .btn-like .fas {
   opacity: 0;
   position: absolute;
-  top: 1px;
+  z-index: 0;
+  top: 2px;
   left: 0;
   right: 0;
   bottom: 0;
   background-image: linear-gradient(180deg, #FF79DA, #9356DC);
   background-size: 100%;
-  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  transition-delay: 0.3s;
+  transition-delay: 0.5s;
   transition: opacity 0.5s ease-out;
 }
 .btn-like:hover .far {
   opacity: 0;
+  z-index: 0;
 }
 .btn-like:hover .fas {
   opacity: 1;
+  z-index: 1;
 }
 
 .step {
   background: #F6F6F6;
   padding: 1.5625rem 0.625rem;
   margin-bottom: 1.25rem;
+  margin-left: 0.8125rem;
   border-radius: 1.5rem;
   position: relative;
   display: flex;
@@ -273,12 +336,12 @@ button {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-.card__body .card-description__title {
+.card__title {
   font-size: 1.125rem;
   font-weight: 900;
   margin-bottom: 0.3125rem;
 }
-.card__body .card-description__city {
+.card__city {
   font-weight: 300;
   text-transform: capitalize;
 }
@@ -301,7 +364,7 @@ button {
   background: #FFF;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  animation: plateappear 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: plateappear 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation-fill-mode: both;
   transform: scale(0);
   overflow: hidden;
@@ -312,26 +375,27 @@ button {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-.plate_info {
+.plate__info {
   white-space: nowrap;
   overflow: hidden;
   flex: 1;
 }
-.plate_info__title {
+.plate__title {
   font-weight: 900;
   margin-bottom: 0.3125rem;
 }
-.plate_info__composition {
+.plate__composition {
   font-weight: 300;
+  font-size: 0.9375rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.plate_price {
+.plate__price {
   margin-top: auto;
   margin-left: 1rem;
 }
-.plate_confirmation {
+.plate__confirmation {
   background-color: #99E2D0;
   color: #FFF;
   font-size: 1.25rem;
@@ -342,56 +406,47 @@ button {
   align-items: center;
   justify-content: center;
   margin: -0.75rem -4.5rem -0.75rem 1rem;
-  transition: margin-right 1s ease;
+  transition: margin-right 500ms ease;
 }
-.plate_confirmation i {
+.plate__confirmation i {
   transform: rotate(0);
-  transition: transform 1s ease;
+  transition: transform 500ms ease;
 }
 .plate:hover {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
-.plate:hover .plate_confirmation {
+.plate:hover .plate__confirmation {
   margin-right: -0.75rem;
 }
-.plate:hover .plate_confirmation i {
+.plate:hover .plate__confirmation i {
   transform: rotate(360deg);
 }
-
-.delay--1 {
-  animation-delay: 0.1s;
+.plate--1 {
+  animation-delay: 50ms;
 }
-
-.delay--2 {
-  animation-delay: 0.2s;
+.plate--2 {
+  animation-delay: 100ms;
 }
-
-.delay--3 {
-  animation-delay: 0.3s;
+.plate--3 {
+  animation-delay: 150ms;
 }
-
-.delay--4 {
-  animation-delay: 0.4s;
+.plate--4 {
+  animation-delay: 200ms;
 }
-
-.delay--5 {
-  animation-delay: 0.5s;
+.plate--5 {
+  animation-delay: 250ms;
 }
-
-.delay--6 {
-  animation-delay: 0.6s;
+.plate--6 {
+  animation-delay: 300ms;
 }
-
-.delay--7 {
-  animation-delay: 0.7s;
+.plate--7 {
+  animation-delay: 350ms;
 }
-
-.delay--8 {
-  animation-delay: 0.8s;
+.plate--8 {
+  animation-delay: 400ms;
 }
-
-.delay--9 {
-  animation-delay: 0.9s;
+.plate--9 {
+  animation-delay: 450ms;
 }
 
 .header {
@@ -405,11 +460,12 @@ button {
   flex-wrap: nowrap;
 }
 .header__logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+  font-size: 1.875rem;
+  text-align: center;
+  text-transform: lowercase;
   margin: 0 auto;
-  line-height: 0;
-}
-.header__logo a {
-  display: inline-block;
 }
 .header__navbar a {
   display: inline-block;
@@ -427,7 +483,9 @@ button {
 .footer__title {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  text-transform: lowercase;
+  margin-bottom: 1.25rem;
 }
 .footer li {
   margin-bottom: 0.625rem;
@@ -438,6 +496,12 @@ button {
 .footer li i {
   margin-right: 0.3125rem;
   font-size: 0.875rem;
+}
+
+#content {
+  position: relative;
+  animation: contentappear 3.5s ease-in-out;
+  animation-fill-mode: both;
 }
 
 .location {
@@ -459,76 +523,21 @@ button {
   background-color: #F6F6F6;
   text-align: center;
 }
+.restaurants h2 {
+  padding: 0 2.5rem;
+}
 .restaurants__description {
   font-size: 1.125rem;
   font-weight: 300;
   margin-bottom: 1.875rem;
 }
 
-.steps {
-  padding: 0 0.9375rem;
+.operation__steps {
   margin: 1.875rem 0;
 }
 
 .cards {
   background-color: #F6F6F6;
-}
-
-.loader {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.loader__circles {
-  width: 80px;
-  height: 80px;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  border-radius: 80px;
-  border: 4px solid transparent;
-  border-top-color: #9356DC;
-  animation: spin 2s linear 1.1s;
-  animation-fill-mode: both;
-}
-.loader__circles::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  bottom: 8px;
-  right: 8px;
-  border-radius: 50px;
-  border: 4px solid transparent;
-  border-top-color: #FF79DA;
-  opacity: 0.8;
-  animation: spin 2.5s linear 600ms;
-}
-.loader__circles:before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  bottom: 20px;
-  right: 20px;
-  border-radius: 50px;
-  border: 4px solid transparent;
-  border-top-color: #99E2D0;
-  opacity: 0.5;
-  animation: spin 3s linear 100ms;
-}
-
-.content {
-  position: relative;
-  animation: contentappear 3.5s ease-in-out;
-  animation-fill-mode: both;
 }
 
 .menu {
@@ -543,13 +552,13 @@ button {
 }
 .menu__content {
   background-color: #F6F6F6;
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 3rem;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
   margin-top: -4rem;
   position: relative;
   z-index: 2;
 }
-.menu .menu_info {
+.menu__info {
   margin-bottom: 2.5rem;
   display: flex;
   flex-direction: row;
@@ -557,19 +566,16 @@ button {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-.menu .menu_info__title {
+.menu__title {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   margin-bottom: 0;
 }
-.menu .menu_info .btn--mr {
-  margin-right: 1.25rem;
-}
-.menu .menu_plates {
+.menu__plates {
   margin-bottom: 3rem;
 }
-.menu .menu_order {
+.menu__order {
   text-align: center;
   margin-bottom: 3rem;
 }

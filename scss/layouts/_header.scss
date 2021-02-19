@@ -6,12 +6,12 @@
     @include flex(row, center, center, nowrap);
 
     &__logo {
+        font-family: 'Shrikhand', cursive;
+        font-weight: normal;
+        font-size: rem(30);
+        text-align: center;
+        text-transform: lowercase;
         margin: 0 auto;
-        line-height: 0;
-
-        a {
-            display: inline-block;
-        }
     }
 
     &__navbar a {

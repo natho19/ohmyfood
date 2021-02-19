@@ -29,47 +29,55 @@
             opacity: 1;
         }
     }
-}
 
-.btn--py {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    &--py {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    &--mr {
+        margin-right: rem(20);
+    }
 }
 
 .btn-like {
-    font-size: rem(30);
     position: relative;
+    font-size: rem(30);
 
     .far {
         opacity: 1;
-        transition: opacity .3s ease-in;
+        position: relative;
+        z-index: 1;
+        transition: all .5s ease-in;
     }
 
     .fas {
         opacity: 0;
         position: absolute;
-        top: 1px;
+        z-index: 0;
+        top: 2px;
         left: 0;
         right: 0;
         bottom: 0;
         background-image: $linear-gradient;
         background-size: 100%;
-        background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; 
         -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
         -moz-text-fill-color: transparent;
-        transition-delay: .3s;
+        transition-delay: .5s;
         transition: opacity .5s ease-out;
     }
 
     &:hover {
         & .far {
             opacity: 0;
+            z-index: 0;
         }
 
         & .fas {
             opacity: 1;
+            z-index: 1;
         }
     }
 }

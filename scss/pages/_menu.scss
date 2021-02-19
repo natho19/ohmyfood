@@ -11,35 +11,31 @@
 
     &__content {
         background-color: $gray-light;
-        border-top-left-radius: 3rem;
-        border-top-right-radius: 3rem;
+        border-top-left-radius: 2.5rem;
+        border-top-right-radius: 2.5rem;
         margin-top: - 4rem;
         position: relative;
         z-index: 2;
         @extend %container;
     }
 
-    .menu_info {
+    &__info {
         margin-bottom: 2.5rem;
         @include flex(row, center, space-between, nowrap);
-
-        &__title {
-            font-family: "Shrikhand", cursive;
-            font-weight: normal;
-            font-size: rem(30);
-            margin-bottom: 0;
-        }
-
-        .btn--mr {
-            margin-right: rem(20);
-        }
     }
 
-    .menu_plates {
+    &__title {
+        font-family: "Shrikhand", cursive;
+        font-weight: normal;
+        font-size: rem(28);
+        margin-bottom: 0;
+    }
+
+    &__plates {
         margin-bottom: 3rem;
     }
 
-    .menu_order {
+    &__order {
         text-align: center;
         margin-bottom: 3rem;
     }

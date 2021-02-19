@@ -1,26 +1,28 @@
 .footer {
     background: $black;
     color: $white;
-    @extend %container-sm;
+    @extend %container-md;
 
     &__title {
         font-family: 'Shrikhand', cursive;
         font-weight: normal;
-        font-size: rem(18);
+        font-size: rem(20);
+        text-transform: lowercase;
+        margin-bottom: rem(20);
     }
 
     li {
         margin-bottom: rem(10);
-    }
 
-    li a {
-        &:hover {
-            color: darken($white, 20%);
+        a {
+            &:hover {
+                color: darken($white, 20%);
+            }
         }
-    }
 
-    li i {
-        margin-right: rem(5);
-        font-size: rem(14);
+        i {
+            margin-right: rem(5);
+            font-size: rem(14);
+        }
     }
 }

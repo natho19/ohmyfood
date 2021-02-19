@@ -3,37 +3,38 @@
     background: $white;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    animation: plateappear .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: plateappear $anim-dur cubic-bezier(0.25, 0.46, 0.45, 0.94);
     animation-fill-mode: both;
     transform: scale(0);
     overflow: hidden;
     @include general-shadow;
     @include flex(row, inherit, space-between, nowrap);
     
-    &_info {
+    &__info {
         white-space: nowrap;
         overflow: hidden;
         flex: 1;
-
-        &__title {
-            font-weight: 900;
-            margin-bottom: rem(5);   
-        }
-
-        &__composition {
-            font-weight: 300;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
     }
 
-    &_price {
+    &__title {
+        font-weight: 900;
+        margin-bottom: rem(5);   
+    }
+
+    &__composition {
+        font-weight: 300;
+        font-size: rem(15);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &__price {
         margin-top: auto;
         margin-left: 1rem;
     }
 
-    &_confirmation {
+    &__confirmation {
         background-color: #99E2D0;
         color: $white;
         font-size: rem(20);
@@ -44,18 +45,18 @@
         align-items: center;
         justify-content: center;
         margin: -0.75rem -4.5rem -0.75rem 1rem;
-        transition: margin-right 1s ease;
+        transition: margin-right $anim-dur ease;
 
         i {
             transform: rotate(0);
-            transition: transform 1s ease;
+            transition: transform $anim-dur ease;
         }   
     }
 
     &:hover {
         @include hover-shadow;
 
-        .plate_confirmation {
+        .plate__confirmation {
             margin-right: -0.75rem;
 
             i {
@@ -63,10 +64,10 @@
             }
         }
     }
-}
 
-@for $i from 1 to 10 {
-    .delay--#{$i} {
-      animation-delay:  #{$i/10}s;
+    @for $i from 1 through $num-plates {
+        &--#{$i} {
+          animation-delay: $anim-delay * $i;
+        }
     }
 }
