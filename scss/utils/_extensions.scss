@@ -1,5 +1,13 @@
 %container-sm {
     padding: 1rem;
+
+    @media #{$large-up} {
+        padding: 1rem 4rem;
+    }
+
+    @media #{$xlarge-up} {
+        padding: 1rem 8rem;
+    }
 }
 
 %container-md {

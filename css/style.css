@@ -1,6 +1,16 @@
 .location, .header {
   padding: 1rem;
 }
+@media only screen and (min-width: 992px) {
+  .location, .header {
+    padding: 1rem 4rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .location, .header {
+    padding: 1rem 8rem;
+  }
+}
 
 .footer {
   padding: 1.25rem;
