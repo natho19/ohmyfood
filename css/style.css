@@ -556,6 +556,9 @@ button {
   margin-right: 0.3125rem;
   font-size: 0.875rem;
 }
+.footer li address {
+  font-style: normal;
+}
 
 #content {
   position: relative;
