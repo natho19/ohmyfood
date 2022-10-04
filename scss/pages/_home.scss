@@ -36,6 +36,8 @@
 }
 
 .steps {
+    list-style-type: none;
+
     @media #{$medium-up} {
         &__list {
             @include flex(row, center, space-between, wrap)

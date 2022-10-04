@@ -302,6 +302,7 @@ button {
   margin-left: 0.8125rem;
   border-radius: 1.5rem;
   position: relative;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -593,6 +594,9 @@ button {
   padding: 0 1.25rem;
 }
 
+.steps {
+  list-style-type: none;
+}
 @media only screen and (min-width: 768px) {
   .steps__list {
     display: flex;
