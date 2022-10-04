@@ -1,5 +1,5 @@
 # Ohmyfood
-Projet 4 du parcours Intégrateur Web d'OpenClassrooms : Dynamisez un site web avec des animations CSS
+Projet 4 du parcours Intégrateur Web d'OpenClassrooms : Améliorez l'interface d'un site mobile avec des animations CSS
 
 ## :white_check_mark: Compétences évaluées
 - Intégrer une maquette en mobile-first
