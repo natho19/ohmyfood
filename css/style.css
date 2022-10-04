@@ -259,40 +259,18 @@ button {
   margin-right: 1.25rem;
 }
 
-.btn-like {
-  position: relative;
-  font-size: 1.875rem;
-}
-.btn-like .far {
-  opacity: 1;
-  position: relative;
-  z-index: 1;
+.btn-like i {
+  font-size: 1.5625rem;
   transition: all 0.5s ease-in;
 }
-.btn-like .fas {
-  opacity: 0;
-  position: absolute;
-  z-index: 0;
-  top: 2px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.btn-like i:hover {
+  font-weight: 700;
   background-image: linear-gradient(180deg, #FF79DA, #9356DC);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  transition-delay: 0.5s;
-  transition: opacity 0.5s ease-out;
-}
-.btn-like:hover .far {
-  opacity: 0;
-  z-index: 0;
-}
-.btn-like:hover .fas {
-  opacity: 1;
-  z-index: 1;
 }
 
 .step {
@@ -336,6 +314,9 @@ button {
 }
 .step:hover i {
   color: #9356DC;
+}
+.step:last-child {
+  margin-bottom: 0;
 }
 @media only screen and (min-width: 768px) {
   .step {
