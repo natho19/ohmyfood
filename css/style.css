@@ -1,13 +1,13 @@
-.location, .header {
+.header {
   padding: 1rem;
 }
 @media only screen and (min-width: 992px) {
-  .location, .header {
+  .header {
     padding: 1rem 4rem;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .location, .header {
+  .header {
     padding: 1rem 8rem;
   }
 }
@@ -27,7 +27,7 @@
 }
 
 .menu__content, section {
-  padding: 2.5rem 1.25rem;
+  padding: 3.125rem 1.25rem;
 }
 @media only screen and (min-width: 992px) {
   .menu__content, section {
@@ -565,37 +565,34 @@ button {
   animation: contentappear 3.5s ease-in-out both;
 }
 
-.location {
-  background-color: #EAEAEA;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.location__icon {
-  margin-right: 10px;
-}
-.location__address {
-  font-style: normal;
-}
-
-.restaurants {
+.restaurant {
+  padding: 0 0 3.125rem;
   background-color: #F6F6F6;
   text-align: center;
 }
-.restaurants h2 {
+.restaurant__address {
+  background-color: #EAEAEA;
+  font-style: normal;
+  font-weight: 500;
+  padding: 1em;
+  margin-bottom: 2.1875em;
+}
+.restaurant__address i {
+  margin-right: 0.9375em;
+}
+.restaurant h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
   padding: 0 2.5rem;
 }
-.restaurants__description {
+.restaurant__description {
   font-size: 1.125rem;
   font-weight: 300;
   margin-bottom: 1.875rem;
+  padding: 0 1.25rem;
 }
 
-.steps {
-  margin: 1.875rem 0;
-}
 @media only screen and (min-width: 768px) {
   .steps__list {
     display: flex;
