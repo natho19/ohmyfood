@@ -1,5 +1,5 @@
 # Ohmyfood
-Projet 3 du parcours développeur web d'OpenClassrooms : Dynamisez un site web avec des animations CSS
+Projet 3 du parcours Développeur Web d'OpenClassrooms : Dynamisez un site web avec des animations CSS
 
 ## :dart: Objectifs attendus
 - Développer un site proposant le menu de **4 grands restaurants parisiens**
