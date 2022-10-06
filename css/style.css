@@ -40,7 +40,27 @@
   }
 }
 
-@keyframes plateappear {
+@keyframes full-heart {
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes plate-appear {
   0% {
     transform: scale(0);
   }
@@ -62,7 +82,7 @@
     opacity: 0;
   }
 }
-@keyframes contentappear {
+@keyframes content-appear {
   0% {
     z-index: 0;
   }
@@ -70,7 +90,7 @@
     z-index: 10000;
   }
 }
-@keyframes confirmationrotate {
+@keyframes confirmation-rotate {
   0% {
     transform: rotate(180deg);
   }
@@ -261,16 +281,15 @@ button {
 
 .btn-like i {
   font-size: 1.5625rem;
-  transition: all 0.5s ease-in;
 }
 .btn-like i:hover {
   font-weight: 700;
   background-image: linear-gradient(180deg, #FF79DA, #9356DC);
-  background-size: 100%;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  -moz-background-clip: text;
+  animation: full-heart 300ms ease-in-out both;
 }
 
 .step {
@@ -393,7 +412,7 @@ button {
   background: #FFF;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  animation: plateappear 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: plate-appear 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   transform: scale(0);
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -544,7 +563,7 @@ button {
 
 #content {
   position: relative;
-  animation: contentappear 3.5s ease-in-out both;
+  animation: content-appear 3.5s ease-in-out both;
 }
 
 .restaurant {

@@ -41,19 +41,17 @@
 }
 
 .btn-like {
-    
     i {
         font-size: rem(25);
-        transition: all .5s ease-in;
 
         &:hover {
             font-weight: 700;
             background-image: $linear-gradient;
-            background-size: 100%;
             -webkit-background-clip: text;
-            -moz-background-clip: text;
-            -webkit-text-fill-color: transparent; 
+            -webkit-text-fill-color: transparent;
             -moz-text-fill-color: transparent;
+            -moz-background-clip: text;
+            animation: full-heart 300ms ease-in-out both;
         }
     }
 }
