@@ -16,22 +16,23 @@
     }
 
     &__title, &__composition {
-        margin-bottom: rem(5);
         text-overflow: ellipsis;
         overflow: hidden; 
     }
 
     &__title {
         font-weight: 900;
+        font-size: rem(18);
+        margin-bottom: rem(5);
     }
 
     &__composition {
         font-weight: 300;
+        font-size: rem(15);
     }
 
     &__price {
-        margin-top: auto;
-        margin-left: 1rem;
+        align-self: flex-end;
     }
 
     &__confirmation {
@@ -65,6 +66,10 @@
         }
     }
 
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     @for $i from 1 through $num-plates {
         &--#{$i} {
           animation-delay: $anim-delay * $i;
@@ -77,5 +82,6 @@
 
     @media #{$large-up} {
         flex-basis: 32%;
+        margin-bottom: 0;
     }
 }

@@ -231,6 +231,7 @@ button {
   text-transform: uppercase;
   margin-bottom: 1.25rem;
   font-weight: 300;
+  font-size: 1rem;
 }
 .underline-title:after {
   background: #99E2D0;
@@ -412,7 +413,7 @@ button {
   background: #FFF;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  animation: plate-appear 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: plate-appear 750ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   transform: scale(0);
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -428,19 +429,20 @@ button {
   flex: 1;
 }
 .plate__title, .plate__composition {
-  margin-bottom: 0.3125rem;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .plate__title {
   font-weight: 900;
+  font-size: 1.125rem;
+  margin-bottom: 0.3125rem;
 }
 .plate__composition {
   font-weight: 300;
+  font-size: 0.9375rem;
 }
 .plate__price {
-  margin-top: auto;
-  margin-left: 1rem;
+  align-self: flex-end;
 }
 .plate__confirmation {
   background-color: #99E2D0;
@@ -453,11 +455,11 @@ button {
   align-items: center;
   justify-content: center;
   margin: -0.75rem -4.5rem -0.75rem 1rem;
-  transition: margin-right 500ms ease;
+  transition: margin-right 750ms ease;
 }
 .plate__confirmation i {
   transform: rotate(0);
-  transition: transform 500ms ease;
+  transition: transform 750ms ease;
 }
 .plate:hover {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
@@ -468,35 +470,38 @@ button {
 .plate:hover .plate__confirmation i {
   transform: rotate(360deg);
 }
+.plate:last-child {
+  margin-bottom: 0;
+}
 .plate--1 {
-  animation-delay: 50ms;
+  animation-delay: 75ms;
 }
 .plate--2 {
-  animation-delay: 100ms;
-}
-.plate--3 {
   animation-delay: 150ms;
 }
+.plate--3 {
+  animation-delay: 225ms;
+}
 .plate--4 {
-  animation-delay: 200ms;
-}
-.plate--5 {
-  animation-delay: 250ms;
-}
-.plate--6 {
   animation-delay: 300ms;
 }
-.plate--7 {
-  animation-delay: 350ms;
+.plate--5 {
+  animation-delay: 375ms;
 }
-.plate--8 {
-  animation-delay: 400ms;
-}
-.plate--9 {
+.plate--6 {
   animation-delay: 450ms;
 }
+.plate--7 {
+  animation-delay: 525ms;
+}
+.plate--8 {
+  animation-delay: 600ms;
+}
+.plate--9 {
+  animation-delay: 675ms;
+}
 .plate--10 {
-  animation-delay: 500ms;
+  animation-delay: 750ms;
 }
 @media only screen and (min-width: 768px) {
   .plate {
@@ -506,6 +511,7 @@ button {
 @media only screen and (min-width: 992px) {
   .plate {
     flex-basis: 32%;
+    margin-bottom: 0;
   }
 }
 
@@ -528,7 +534,7 @@ button {
   transform: scale(1);
 }
 .header .navbar a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .header .navbar ~ img {
   margin-right: auto;
@@ -541,7 +547,7 @@ button {
 .footer__title {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   text-transform: lowercase;
   margin-bottom: 1.25rem;
 }
