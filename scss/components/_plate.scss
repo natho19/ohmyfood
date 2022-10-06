@@ -15,17 +15,18 @@
         flex: 1;
     }
 
+    &__title, &__composition {
+        margin-bottom: rem(5);
+        text-overflow: ellipsis;
+        overflow: hidden; 
+    }
+
     &__title {
         font-weight: 900;
-        margin-bottom: rem(5);   
     }
 
     &__composition {
         font-weight: 300;
-        font-size: rem(15);
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
     }
 
     &__price {

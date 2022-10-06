@@ -427,16 +427,16 @@ button {
   overflow: hidden;
   flex: 1;
 }
+.plate__title, .plate__composition {
+  margin-bottom: 0.3125rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .plate__title {
   font-weight: 900;
-  margin-bottom: 0.3125rem;
 }
 .plate__composition {
   font-weight: 300;
-  font-size: 0.9375rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 .plate__price {
   margin-top: auto;
@@ -519,21 +519,19 @@ button {
   justify-content: center;
   flex-wrap: nowrap;
 }
-.header__logo {
-  font-family: "Shrikhand", cursive;
-  font-weight: normal;
-  font-size: 1.875rem;
-  text-align: center;
-  text-transform: lowercase;
-  margin: 0 auto;
+.header .navbar {
+  margin-right: auto;
 }
-.header__navbar a {
+.header .navbar a {
   display: inline-block;
   font-size: 1.125rem;
   transform: scale(1);
 }
-.header__navbar a:hover {
+.header .navbar a:hover {
   transform: scale(1.2);
+}
+.header .navbar ~ img {
+  margin-right: auto;
 }
 
 .footer {
