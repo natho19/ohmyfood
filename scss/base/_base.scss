@@ -1,11 +1,13 @@
 html {
-    font-size: 16px;
+    font-size: unquote($base-font-size + 'px');
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.2;
     color: #000;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 section {
