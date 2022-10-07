@@ -278,8 +278,14 @@ button {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
 }
-.btn--mr {
+.btn--mx {
   margin-right: 1.25rem;
+}
+@media only screen and (min-width: 1200px) {
+  .btn--mx {
+    margin-right: 0;
+    margin-left: 1.5625rem;
+  }
 }
 
 .btn-like i {
@@ -445,6 +451,7 @@ button {
 }
 .plate__price {
   align-self: flex-end;
+  margin-left: 0.625rem;
 }
 .plate__confirmation {
   background-color: #99E2D0;
@@ -512,8 +519,7 @@ button {
 }
 @media only screen and (min-width: 992px) {
   .plate {
-    flex-basis: 32%;
-    margin-bottom: 0;
+    flex-basis: 100%;
   }
 }
 
@@ -565,6 +571,25 @@ button {
 }
 .footer li address {
   font-style: normal;
+}
+@media only screen and (min-width: 1200px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .footer__title {
+    margin-bottom: 0;
+    margin-left: 3.125rem;
+  }
+  .footer__link {
+    display: flex;
+  }
+  .footer li {
+    margin: 0 1.25rem;
+  }
+  .footer li:first-child {
+    margin-left: 0;
+  }
 }
 
 #content {
@@ -644,6 +669,13 @@ button {
   position: relative;
   z-index: 2;
 }
+@media only screen and (min-width: 1200px) {
+  .menu__content {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .menu__info {
   margin-bottom: 2.5rem;
   display: flex;
@@ -651,6 +683,11 @@ button {
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
+}
+@media only screen and (min-width: 1200px) {
+  .menu__info {
+    justify-content: center;
+  }
 }
 .menu__title {
   font-family: "Shrikhand", cursive;

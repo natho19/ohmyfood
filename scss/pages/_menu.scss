@@ -17,11 +17,21 @@
         position: relative;
         z-index: 2;
         @extend %container;
+
+        @media #{$xlarge-up} {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__info {
         margin-bottom: 2.5rem;
         @include flex(row, center, space-between, nowrap);
+
+        @media #{$xlarge-up} {
+            justify-content: center;
+        }
     }
 
     &__title {

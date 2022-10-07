@@ -35,8 +35,13 @@
         padding-right: 3.5rem;
     }
 
-    &--mr {
+    &--mx {
         margin-right: rem(20);
+
+        @media #{$xlarge-up} {
+            margin-right: 0;
+            margin-left: rem(25);
+        }
     }
 }
 
