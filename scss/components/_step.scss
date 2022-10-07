@@ -41,10 +41,6 @@
         }
     }
 
-    &:last-child {
-        margin-bottom: 0;
-    }
-
     @media #{$medium-up} {
         flex-basis: 47%;
     }

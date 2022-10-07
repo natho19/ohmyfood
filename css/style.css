@@ -279,7 +279,7 @@ button {
   padding-right: 3.5rem;
 }
 .btn--mx {
-  margin-right: 1.25rem;
+  margin-right: 1.5625rem;
 }
 @media only screen and (min-width: 1200px) {
   .btn--mx {
@@ -342,9 +342,6 @@ button {
 }
 .step:hover i {
   color: #9356DC;
-}
-.step:last-child {
-  margin-bottom: 0;
 }
 @media only screen and (min-width: 768px) {
   .step {
@@ -478,9 +475,6 @@ button {
 }
 .plate:hover .plate__confirmation i {
   transform: rotate(360deg);
-}
-.plate:last-child {
-  margin-bottom: 0;
 }
 .plate--1 {
   animation-delay: 75ms;
