@@ -67,10 +67,6 @@
         }
     }
 
-    &:last-child {
-        margin-bottom: 0;
-    }
-
     @for $i from 1 through $num-plates {
         &--#{$i} {
           animation-delay: $anim-delay * $i;
