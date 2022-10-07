@@ -445,6 +445,7 @@ button {
 }
 .plate__price {
   align-self: flex-end;
+  margin-left: 0.625rem;
 }
 .plate__confirmation {
   background-color: #99E2D0;
