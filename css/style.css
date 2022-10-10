@@ -288,6 +288,9 @@ button {
   }
 }
 
+.btn-like {
+  margin-left: 0.625rem;
+}
 .btn-like i {
   font-size: 1.5625rem;
 }
