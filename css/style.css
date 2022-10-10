@@ -511,7 +511,6 @@ button {
 @media only screen and (min-width: 992px) {
   .plate {
     flex-basis: 32%;
-    margin-bottom: 0;
   }
 }
 
