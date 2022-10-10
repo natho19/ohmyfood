@@ -40,7 +40,7 @@
 
         @media #{$xlarge-up} {
             margin-right: 0;
-            margin-left: rem(25);
+            margin-left: rem(25) !important;
         }
     }
 }

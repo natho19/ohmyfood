@@ -284,7 +284,7 @@ button {
 @media only screen and (min-width: 1200px) {
   .btn--mx {
     margin-right: 0;
-    margin-left: 1.5625rem;
+    margin-left: 1.5625rem !important;
   }
 }
 
